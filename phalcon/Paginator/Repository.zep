@@ -155,6 +155,16 @@ class Repository implements RepositoryInterface, JsonSerializable
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function setItems(var items) -> <RepositoryInterface>
+    {
+        let this->properties[self::PROPERTY_ITEMS] = items;
+
+        return this;
+    }
+
+    /**
      * Gets value of property by name
      */
     protected function getProperty(string property, var defaultValue = null) -> var
